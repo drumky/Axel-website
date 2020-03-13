@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header(){
+const Header = () => {
 
     let greeting;
 
@@ -11,20 +11,20 @@ function Header(){
     var randomNumber = Math.floor(Math.random() * 10);
     console.log(randomNumber);
 
-    if (randomNumber < 3){
-        greeting = "Server 1 is running";
+    if (randomNumber < 3) {
+        greeting = "H.O.M.E";
+        customStyles.color = "orange";
+    } else if (randomNumber < 6) {
+        greeting = "H.O.M.E";
         customStyles.color = "red";
-    } else if (randomNumber < 6){
-        greeting = "Server 2 is running";
-        customStyles.color = "blue";
     } else {
-        greeting = "Server 3 is running";
+        greeting = "H.O.M.E";
         customStyles.color = "green";
     }
 
-    return(
-    <h1 classname="heading" style={customStyles}>{greeting}</h1>
-        );
+    return (
+        <h1 className="heading" style={customStyles}>{greeting}</h1>
+    );
 }
 
 
